@@ -1,0 +1,40 @@
+{
+    "jobs": [
+        {
+            "id": 1,
+            "title": "ABCDE",
+            "salary": 2000,
+            "location": "UK"
+        },
+        {
+            "id": 2,
+            "title": "KDMASA",
+            "salary": 7000,
+            "location": "VietNam"
+        },
+        {
+            "id": 3,
+            "title": "SDKLSDKSD",
+            "salary": 14000,
+            "location": "Italy"
+        },
+        {
+            "id": 4,
+            "title": "AQOKWDDS",
+            "salary": 79000,
+            "location": "Russia"
+        },
+        {
+            "id": 5,
+            "title": "CMNVMXC",
+            "salary": 22000,
+            "location": "Spanish"
+        },
+        {
+            "id": 6,
+            "title": "MMOOOOL",
+            "salary": 50000,
+            "location": "China"
+        }
+    ]
+}
