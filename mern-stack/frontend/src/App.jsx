@@ -6,19 +6,17 @@ import MyNotes from "./screens/MyNotes/MyNotes";
 import LoginScreen from "./screens/LoginPage/LoginScreen";
 import RegisterScreen from "./screens/RegisterPage/RegisterScreen";
 
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Header></Header>
+      <Header />
       <main>
-        <Routes>
-          <Route path="/" element={<LandingPage />} exact />
-          <Route path="/login" element={<LoginScreen />} exact />
-          <Route path="/register" element={<RegisterScreen />} exact />
-          <Route path="/mynotes" Component={() => <MyNotes />} />
-        </Routes>
+        <Route exact path="/" component={LandingPage} />
+        <Route path="/login" component={() => <LoginScreen />} exact />
+        <Route path="/register" component={RegisterScreen} exact />
+        <Route path="/mynotes" component={() => <MyNotes />} />
       </main>
       <Footer></Footer>
     </BrowserRouter>

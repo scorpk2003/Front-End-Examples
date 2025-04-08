@@ -3,6 +3,7 @@ const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 const userRoutes = require("./routes/userRoutes");
 const { notFound, errorHandler } = require("./middlewares/errorMiddlewares");
+const notes = require("./data/notes");
 
 const app = express();
 dotenv.config();
@@ -13,10 +14,10 @@ app.use(express.json());
 //   res.send("abc");
 // });
 
-// app.get("/api/notes", (req, res) => {
-//   console.log("GET notes");
-//   res.json(notes);
-// });
+app.get("/api/notes", (req, res) => {
+  console.log("GET notes");
+  res.json(notes);
+});
 
 app.use("/api/users", userRoutes);
 

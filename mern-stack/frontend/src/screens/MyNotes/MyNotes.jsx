@@ -30,46 +30,53 @@ const MyNotes = () => {
         </Button>
       </Link>
       {notes.map((note) => (
-        <Accordion key={note._id}>
-          <Card>
-            <Card.Header style={{ display: "flex" }}>
-              <span
-                style={{
-                  color: "black",
-                  textDecoration: "none",
-                  flex: 1,
-                  cursor: "pointer",
-                  alignSelf: "center",
-                  fontSize: 18,
-                }}
-              >
-                <Accordion.Header as={Card.Text} bg="link" eventkey="0">
-                  {note.title}
-                </Accordion.Header>
-              </span>
-              <div>
-                <Button href={`/notes/${note._id}`}>Edit</Button>
-                <Button
-                  bg="danger"
-                  className="mx-2"
-                  onClick={() => DeleteHandler(note._id)}
+        <Accordion defaultActiveKey={["0"]} key={note._id}>
+          <Accordion.Item eventkey="0">
+            <Card style={{ margin: 10 }}>
+              <Card.Header style={{ display: "flex" }}>
+                <span
+                  style={{
+                    color: "black",
+                    textDecoration: "none",
+                    flex: 1,
+                    cursor: "pointer",
+                    alignSelf: "center",
+                    fontSize: 18,
+                  }}
                 >
-                  Delete
-                </Button>
-              </div>
-            </Card.Header>
-            <Accordion.Body eventkey="0">
-              <Card.Body>
-                <h4>
-                  <Badge bg="success">Category - {note.category}</Badge>
-                </h4>
-                <blockquote className="blockquote mb-0">
-                  <p>{note.content}</p>
-                  <footer className="blockquote-footer">Create On Date</footer>
-                </blockquote>
-              </Card.Body>
-            </Accordion.Body>
-          </Card>
+                  <Accordion.Button as={Card.Text} variant="link">
+                    {note.title}
+                  </Accordion.Button>
+                </span>
+                <div>
+                  <Button href={`/note/${note.id}`}>Edit</Button>
+                  <Button
+                    variant="danger"
+                    className="mx-2"
+                    onClick={DeleteHandler}
+                  >
+                    Delete
+                  </Button>
+                </div>
+              </Card.Header>
+              <Accordion.Collapse>
+                <Card.Body>
+                  <h4>
+                    <Badge bg="success" text="light">
+                      Category - {note.category}{" "}
+                    </Badge>
+                  </h4>
+
+                  <blockquote className="blockquote mb-0">
+                    <p>{note.content}</p>
+                    <footer className="blockquote-footer">
+                      Creater on - date
+                    </footer>
+                  </blockquote>
+                </Card.Body>
+              </Accordion.Collapse>
+            </Card>
+          </Accordion.Item>
         </Accordion>
       ))}
     </MainScreen>
