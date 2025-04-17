@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Form, Button } from "react-bootstrap";
-import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 import MainScreen from "../../components/MainScreen";
 import ErrorMessage from "../../components/ErrorMessage";
 import Loading from "../../components/Loading";
+import { register } from "../../actions/userAction";
 
 const RegisterScreen = () => {
   const [name, setName] = useState("");
@@ -16,8 +18,13 @@ const RegisterScreen = () => {
   );
   const [message, setMessage] = useState("");
   const [picMessage, setPicMessage] = useState("");
-  const [error, setError] = useState(false);
-  const [loading, setLoading] = useState(false);
+
+  const history = useHistory();
+
+  const dispatch = useDispatch();
+
+  const userRegister = useSelector((state) => state.userRegister);
+  const { loading, error, userInfo } = userRegister;
 
   const postDetails = (pics) => {
     if (!pics) {
@@ -40,29 +47,21 @@ const RegisterScreen = () => {
     }
   };
 
+  useEffect(() => {}, []);
+
+  useEffect(() => {
+    if (userInfo) {
+      history.push("/mynotes");
+    }
+  }, [history, userInfo]);
+
   const submitHandler = async (e) => {
     e.preventDefault();
     if (password !== confirmPass) {
       setMessage("Password not Match");
     } else {
       setMessage(null);
-      try {
-        const config = {
-          headers: {
-            "Content-type": "application/json",
-          },
-        };
-        setLoading(true);
-        const { data } = await axios.post(
-          "/api/users",
-          { name, password, email, pic },
-          config
-        );
-        setLoading(false);
-        localStorage.setItem("userInfo", JSON.stringify(data));
-      } catch (error) {
-        setError(error.response.data.message);
-      }
+      dispatch(register(name, email, password, pic));
     }
   };
 
