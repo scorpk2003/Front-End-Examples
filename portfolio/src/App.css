@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.text {
+  @apply text-amber-800;
+}
