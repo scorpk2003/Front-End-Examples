@@ -1,5 +1,5 @@
 import { createRoot } from "react-dom/client";
-import Globalstyle from "./GlobalStyle";
+import Globalstyle from "./components/GlobalStyle";
 import App from "./App.jsx";
 
 createRoot(document.getElementById("root")).render(

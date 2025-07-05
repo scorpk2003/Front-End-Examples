@@ -1,14 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0099cc;
+  --background: #051f20;
+  --text-color: #daf1de;
+  --shadow-color: 1px 0 25px 6.5px #235347;
 }
 
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  background: var(--background);
+  @apply bg-[var(--background)] text-base box-border;
 }
 
 html *::-webkit-scrollbar {
