@@ -1,27 +1,10 @@
 @import "tailwindcss";
 
 .wrapper {
-  @apply text-[var(--text-color)] mx-5 py-12 font-semibold;
-  @apply text-base mx-auto flex flex-row justify-center;
+  @apply mx-auto py-15 font-semibold;
+  @apply text-base flex flex-row justify-around;
 }
 
 .logo {
   @apply size-16 left-0 rounded-full shadow-(--shadow-color);
-}
-
-@keyframes pulse-glow {
-  0%,
-  100% {
-    box-shadow: 4px 3px 0 0 rgba(245, 222, 179, 0.3);
-  }
-
-  50% {
-    box-shadow: 0 0 2px 3px rgba(245, 222, 179, 0.2);
-  }
-}
-
-.contact {
-  @apply basis-1/24 inline-flex items-center justify-end cursor-pointer px-3;
-  @apply border-0 rounded-3xl duration-500;
-  animation: pulse-glow 2s infinite;
 }
