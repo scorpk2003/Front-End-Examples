@@ -1,5 +1,8 @@
-import "./Header.css";
+import styles from "./Header.module.css";
 import Button from "../../components/Button";
+import classNames from "classnames/bind";
+
+const cx = classNames.bind(styles);
 
 function App() {
   let icon = (
@@ -9,7 +12,7 @@ function App() {
       viewBox="0 0 24 24"
       strokeWidth="1.5"
       stroke="currentColor"
-      className="size-3"
+      className={cx("icon")}
     >
       <path
         strokeLinecap="round"
@@ -19,9 +22,9 @@ function App() {
     </svg>
   );
   return (
-    <div className="wrapper">
-      <div className="basis-1/2 justify-start">
-        <img src="./src/assets/logo.jpeg" className="logo"></img>
+    <div className={cx("heading")}>
+      <div className={cx("logo-wrapper")}>
+        <img src="./src/assets/logo.jpeg" className={cx("logo")}></img>
       </div>
       <Button text="Contact" icon={icon}></Button>
     </div>

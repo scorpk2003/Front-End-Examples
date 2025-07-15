@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com.css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 @import "tailwindcss";
-
+@themes {
+  --font-Playfair: "Playfair Display", serif;
+}
 :root {
   --background: #0077b6;
   --text-color: #caf0f8;
@@ -9,7 +12,8 @@
 }
 
 * {
-  @apply text-base box-border text-[var(--text-color)];
+  @apply text-base box-border text-[var(--text-color)] font-[--font-Playfair];
+  @apply mx-1;
 }
 
 html *::-webkit-scrollbar {

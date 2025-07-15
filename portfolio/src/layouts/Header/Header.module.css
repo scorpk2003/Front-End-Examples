@@ -1,0 +1,17 @@
+@import "tailwindcss";
+.heading {
+  @apply font-semibold py-6;
+  @apply text-base flex flex-row justify-around;
+}
+
+.logo {
+  @apply size-12 left-0 rounded-full shadow-(--shadow-color);
+}
+
+.logo-wrapper {
+  @apply basis-1/3 justify-start;
+}
+
+.icon {
+  @apply size-3.5;
+}

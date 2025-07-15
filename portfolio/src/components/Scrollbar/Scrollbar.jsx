@@ -1,4 +1,4 @@
-import "./Scrollbar.css";
+import "./Scrollbar.module.css";
 
 function Scrollbar() {
   return <div></div>;

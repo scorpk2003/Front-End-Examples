@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.wrapper {
+  @apply flex items-center;
+}
