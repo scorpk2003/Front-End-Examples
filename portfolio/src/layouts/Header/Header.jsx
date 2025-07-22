@@ -24,7 +24,8 @@ function App() {
   return (
     <div className={cx("heading")}>
       <div className={cx("logo-wrapper")}>
-        <img src="./src/assets/logo.jpeg" className={cx("logo")}></img>
+        {/* <img src="./src/assets/logo.jpeg" className={cx("logo")}></img> */}
+        <div className={cx("logo")}>Portfolio.</div>
       </div>
       <Button text="Contact" icon={icon}></Button>
     </div>

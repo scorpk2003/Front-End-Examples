@@ -2,28 +2,28 @@
 
 @keyframes wave-ripple {
   0% {
-    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.6), 0 0 0 0 rgba(59, 130, 246, 0.4);
+    box-shadow: 0 0 0 0 rgba(56, 178, 163, 0.6), 0 0 0 0 rgba(56, 178, 163, 0.4);
   }
   25% {
-    box-shadow: 0 0 0 10px rgba(59, 130, 246, 0.4),
-      0 0 0 0 rgba(59, 130, 246, 0.6);
+    box-shadow: 0 0 0 10px rgba(56, 178, 163, 0.4),
+      0 0 0 0 rgba(56, 178, 163, 0.6);
   }
   50% {
-    box-shadow: 0 0 0 20px rgba(59, 130, 246, 0.2),
-      0 0 0 10px rgba(59, 130, 246, 0.4);
+    box-shadow: 0 0 0 20px rgba(56, 178, 163, 0.2),
+      0 0 0 10px rgba(56, 178, 163, 0.4);
   }
   75% {
-    box-shadow: 0 0 0 30px rgba(59, 130, 246, 0.1),
-      0 0 0 20px rgba(59, 130, 246, 0.2);
+    box-shadow: 0 0 0 30px rgba(56, 178, 163, 0.1),
+      0 0 0 20px rgba(56, 178, 163, 0.2);
   }
   100% {
-    box-shadow: 0 0 0 40px rgba(59, 130, 246, 0),
-      0 0 0 30px rgba(59, 130, 246, 0);
+    box-shadow: 0 0 0 40px rgba(56, 178, 163, 0),
+      0 0 0 30px rgba(56, 178, 163, 0);
   }
 }
 
 .btn {
-  @apply inline-flex items-center justify-center cursor-pointer px-2;
+  @apply flex items-center cursor-pointer px-3 font-medium hover:text-gray-900;
   @apply border-0 rounded-full transition-all duration-300 bg-[var(--button-color)];
   animation: wave-ripple 2s ease-out infinite;
 }

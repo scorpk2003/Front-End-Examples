@@ -6,8 +6,11 @@ const cx = classNames.bind(styles);
 function Infomation() {
   return (
     <div className={cx("wrapper")}>
-      <div>info01</div>
-      <div>info02</div>
+      <div className={cx("info")}>
+        <img src="../src/assets/avatar.jpeg" className={cx("avatar")}></img>
+        <div>info01</div>
+      </div>
+      <div className={cx("knowledge")}>info02</div>
     </div>
   );
 }
