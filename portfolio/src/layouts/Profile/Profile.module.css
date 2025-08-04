@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+.wrapper {
+  @apply flex items-center relative m-auto;
+}
+
+.avatar {
+  @apply p-3 size-45 rounded-full m-7;
+}
+
+.info {
+  @apply basis-1/2 place-items-center bg-[var(--child-background)];
+  @apply rounded-3xl;
+}
+
+.knowledge {
+  @apply basis-1/2;
+}
+
+.separate-content {
+  @apply w-4/5 h-1 m-4 rounded-full;
+  @apply bg-[var(--text-color)];
+}

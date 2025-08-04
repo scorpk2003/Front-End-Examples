@@ -1,0 +1,3 @@
+.item {
+  @apply text-[var(--child-background)];
+}

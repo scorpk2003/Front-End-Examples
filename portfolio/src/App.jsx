@@ -1,13 +1,17 @@
 import Header from "./layouts/Header";
-import Body from "./layouts/Body";
-import Infomation from "./layouts/Infomation";
+import Project from "./layouts/Project";
+import Profile from "./layouts/Profile";
+import Contact from "./layouts/Contact";
+import About from "./layouts/About";
 
 function App() {
   return (
     <div>
       <Header />
-      <Infomation />
-      <Body>bcd</Body>
+      <About />
+      <Profile />
+      <Project />
+      <Contact />
     </div>
   );
 }

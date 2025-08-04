@@ -5,10 +5,10 @@ const cx = classNames.bind(styles);
 
 function Button({ text, icon }) {
   return (
-    <div className={cx("btn")}>
+    <button className={cx("btn")}>
       <span>{text}</span>
-      {icon && <span>{icon}</span>}
-    </div>
+      {icon && <span className={cx("icon")}>{icon}</span>}
+    </button>
   );
 }
 

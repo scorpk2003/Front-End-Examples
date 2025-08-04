@@ -1,18 +1,52 @@
 @import "tailwindcss";
 
-.heading {
-  @apply py-6;
-  @apply text-base flex flex-row justify-around;
+@keyframes deselect {
+  0% {
+    width: 100%;
+    left: 0%;
+  }
+  ,
+  100% {
+    width: 0%;
+    left: 50%;
+  }
 }
 
-.logo {
-  @apply size-12.5 items-center font-[Intel] flex text-3xl font-bold;
+.scroll {
+  @apply sticky z-50 top-10;
 }
 
-.logo-wrapper {
-  @apply basis-1/3 items-center;
+.selected {
+  @apply text-[var(--text-hover)];
+  @apply after:absolute after:left-0 after:bottom-1/12 after:bg-[var(--text-color)] after:w-full after:h-0.5 after:duration-300;
 }
 
-.icon {
-  @apply size-3.5;
+.deselect {
+  @apply after:absolute after:bottom-1/12 after:left-1/2 after:w-0;
+  @apply after:bg-[var(--text-color)] after:h-0.5;
+  @apply after:animate-[deselect] after:ease-out after:duration-300;
+}
+
+.nav {
+  @apply leading-13 mb-15;
+  @apply flex flex-row;
+  @apply items-center justify-around bg-[var(--child-background)];
+  @apply rounded-full;
+}
+
+.sig {
+  @apply rounded-full bg-[var(--child-background)] text-xl;
+  @apply absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-0;
+  @apply border-0 size-20 object-cover;
+  @apply ring-35 ring-[var(--background)];
+}
+
+.item {
+  @apply px-6 m-1 basis-1/9 relative flex items-center justify-center;
+  @apply cursor-pointer;
+}
+
+.hov-item {
+  @apply hover:after:w-full hover:ease-in hover:transition-all hover:after:left-0 hover:text-[var(--text-hover)];
+  @apply after:absolute after:left-1/2 after:bottom-1/12 after:bg-[var(--text-color)] after:w-0 after:h-0.5 after:duration-500;
 }
