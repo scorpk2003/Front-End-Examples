@@ -1,0 +1,21 @@
+@theme {
+  --color-background: #4cc8a3;
+  --color-child-background: #2c98a0;
+  --color-text: #b0f2bc;
+  --color-text-hover: rgba(176, 242, 188, 0.65);
+  --color-shadow-color: 0px 10px 10px 8px #98e8ac;
+  --color-button: #2c98a0;
+  --color-button-hover: rgba(44, 152, 160, 0.75);
+  --color-selected: rgba(56, 176, 163, 0.8);
+  @keyframes deselect {
+    0% {
+      width: 100%;
+      left: 0%;
+    }
+    ,
+    100% {
+      width: 0%;
+      left: 50%;
+    }
+  }
+}

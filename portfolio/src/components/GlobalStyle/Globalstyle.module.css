@@ -8,44 +8,10 @@
   --text-color: #b0f2bc;
   --text-hover: rgba(176, 242, 188, 0.65);
 
-  --shadow-color: 2px 2px 40px 25px #98e8ac;
+  --shadow-color: 0px 10px 10px 8px #98e8ac;
 
   --button-color: #2c98a0;
   --button-hover: rgba(44, 152, 160, 0.75);
 
   --element-selected: rgba(56, 176, 163, 0.8);
-
-  @apply bg-[var(--background)] px-8 mx-auto w-85/100;
-}
-
-body {
-  @apply font-[Intel] font-medium mt-7;
-  @apply text-center text-lg box-border text-[var(--text-color)];
-}
-
-html *::-webkit-scrollbar {
-  border-radius: 0;
-  width: 8px;
-}
-
-html *::-webkit-scrollbar-thumb {
-  border-radius: 4px;
-  background-color: rgba(0, 0, 0, 0.15);
-}
-
-html *::-webkit-scrollbar-track {
-  border-radius: 0;
-  background-color: rgba(0, 0, 0, 0);
-}
-
-button,
-input,
-[tabindex] {
-  outline: none;
-  border: none;
-}
-
-a {
-  color: var(--text-color);
-  text-decoration: none;
 }

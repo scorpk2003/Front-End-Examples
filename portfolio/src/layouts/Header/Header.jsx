@@ -17,14 +17,22 @@ function Header({ Redirect = null }) {
   };
 
   return (
-    <div className={cx("scroll")}>
-      <ul className={cx("nav")}>
+    <div className="sticky top-13">
+      <ul className="leading-13 mb-15 flex flex-row items-center justify-around bg-child-background rounded-full">
         {navItems.map((item, index) => (
           <li
             key={index}
-            className={cx("item", {
-              "hov-item": index !== 2,
-            })}
+            // className={cx("item", {
+            //   "hov-item": index !== 2,
+            // })}
+            className={`px-6 m-1 basis-1/9 flex items-center justify-center cursor-pointer relative
+              ${
+                index !== 2
+                  ? "after:absolute after:left-1/2 after:bottom-1/12 after:bg-text after:w-0 after:h-0.5 after:duration-500 hover:after:w-full hover:ease-in hover:transition-all hover:after:left-0 hover:text-text-hover"
+                  : ""
+              }
+
+                `}
             onClick={() => handleClick(index)}
           >
             {index === 2 ? (
@@ -35,10 +43,14 @@ function Header({ Redirect = null }) {
               ></img>
             ) : (
               <span
-                className={cx({
-                  selected: selectIndex === index,
-                  deselect: deselectIndex === index,
-                })}
+                // className={cx({
+                //   selected: selectIndex === index,
+                //   deselect: deselectIndex === index,
+                // })}
+                className={`${selectIndex === index ? "selected" : ""} ${
+                  deselectIndex === index ? "deselect" : ""
+                }
+                `}
               >
                 {item}
               </span>
