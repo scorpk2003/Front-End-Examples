@@ -1,7 +1,5 @@
-import "./Project.module.css";
-
 function Project() {
-  return <div>a</div>;
+  return <div className="bg-white pb-200">a</div>;
 }
 
 export default Project;

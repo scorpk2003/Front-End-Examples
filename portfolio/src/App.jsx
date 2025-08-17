@@ -1,5 +1,3 @@
-import "./index.css";
-
 import Header from "./layouts/Header";
 import Project from "./layouts/Project";
 import Profile from "./layouts/Profile";

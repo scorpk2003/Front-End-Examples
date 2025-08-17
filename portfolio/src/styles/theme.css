@@ -1,4 +1,6 @@
 @theme {
+  /* Color */
+
   --color-background: #4cc8a3;
   --color-child-background: #2c98a0;
   --color-text: #b0f2bc;
@@ -7,6 +9,14 @@
   --color-button: #2c98a0;
   --color-button-hover: rgba(44, 152, 160, 0.75);
   --color-selected: rgba(56, 176, 163, 0.8);
+
+  /* Font */
+
+  --font-Intel: "Intel", san-serif;
+  --font-Dancing: "Dancing", cursive;
+
+  /* Animation */
+
   @keyframes deselect {
     0% {
       width: 100%;
@@ -18,4 +28,6 @@
       left: 50%;
     }
   }
+
+  --animate-deselect: deselect ease-in 0.3 linear;
 }

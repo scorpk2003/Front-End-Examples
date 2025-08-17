@@ -4,8 +4,8 @@
   }
 
   body {
-    @apply font-[Intel] font-medium mt-13;
-    @apply text-center text-lg box-border text-[var(--text-color)];
+    @apply font-Intel font-medium mt-13;
+    @apply text-center text-lg box-border text-text;
   }
 
   html *::-webkit-scrollbar {

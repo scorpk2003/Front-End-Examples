@@ -1,13 +1,9 @@
-import styles from "./Header.module.css";
-import classNames from "classnames/bind";
 import { useState } from "react";
 
-const cx = classNames.bind(styles);
-
-function Header({ Redirect = null }) {
+function Header() {
   const navItems = ["About", "Profile", "Khang", "Project", "Contact"];
 
-  const [selectIndex, setSelectIndex] = useState(Redirect);
+  const [selectIndex, setSelectIndex] = useState(null);
   const [deselectIndex, setDeselectIndex] = useState(null);
 
   const handleClick = (index) => {
@@ -18,20 +14,12 @@ function Header({ Redirect = null }) {
 
   return (
     <div className="sticky top-13">
-      <ul className="leading-13 mb-15 flex flex-row items-center justify-around bg-child-background rounded-full">
+      <ul className="header-nav">
         {navItems.map((item, index) => (
           <li
             key={index}
-            // className={cx("item", {
-            //   "hov-item": index !== 2,
-            // })}
-            className={`px-6 m-1 basis-1/9 flex items-center justify-center cursor-pointer relative
-              ${
-                index !== 2
-                  ? "after:absolute after:left-1/2 after:bottom-1/12 after:bg-text after:w-0 after:h-0.5 after:duration-500 hover:after:w-full hover:ease-in hover:transition-all hover:after:left-0 hover:text-text-hover"
-                  : ""
-              }
-
+            className={`header-nav-item
+              ${index !== 2 ? "nav-item-hov" : ""}
                 `}
             onClick={() => handleClick(index)}
           >
@@ -39,14 +27,10 @@ function Header({ Redirect = null }) {
               <img
                 src="../src/assets/male-avt.jpeg"
                 alt={item}
-                className={cx("sig")}
+                className="rounded-full text-xl mt-4 fixed left-1/2 -translate-x-1/2 top-0 border-0 size-20 object-cover overflow-hidden"
               ></img>
             ) : (
               <span
-                // className={cx({
-                //   selected: selectIndex === index,
-                //   deselect: deselectIndex === index,
-                // })}
                 className={`${selectIndex === index ? "selected" : ""} ${
                   deselectIndex === index ? "deselect" : ""
                 }
