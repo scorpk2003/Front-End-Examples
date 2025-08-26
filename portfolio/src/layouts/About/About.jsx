@@ -1,11 +1,8 @@
 function About() {
   return (
-    <div className="text-text bg-white flex flex-row jutify-center items-center">
-      <div className="basis-2/3">a</div>
-      <img
-        src="../src/assets/main-avt.jpeg"
-        className="basis-1/3 rounded-full p-5 m-3"
-      ></img>
+    <div className="relative text-child-background bg-about-bg p-20">
+      <div className="absolute ml-40 mt-20">a</div>
+      <div className="mx-auto rounded-full mt-60 items-center justify-center bg-[url(../src/assets/main-avt.jpeg)] size-80 bg-contain bg-no-repeat"></div>
     </div>
   );
 }

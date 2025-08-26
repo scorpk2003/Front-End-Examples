@@ -1,14 +1,30 @@
 @theme {
   /* Color */
 
-  --color-background: #4cc8a3;
-  --color-child-background: #2c98a0;
-  --color-text: #b0f2bc;
-  --color-text-hover: rgba(176, 242, 188, 0.65);
-  --color-shadow-color: 0px 10px 10px 8px #98e8ac;
-  --color-button: #2c98a0;
+  /* 
+
+    4cc8a3 -> 76 200 163    |   main color
+    2c98a0 -> 44 152 160    |   sub color
+    b0f2bc -> 176 242 188   |   text color
+    38b0a3 -> 56 176 163    |   other color
+  
+  */
+
+  --color-background: rgba(76, 200, 163, 0.7);
+  --color-child-background: rgb(44, 152, 160, 1);
+  --color-about-bg: #daf1de;
+
+  --color-text: rgb(176, 242, 188, 0.8);
+  --color-text-hover: rgba(176, 242, 188, 0.6);
+
+  --color-button: rgb(44, 152, 160, 1);
   --color-button-hover: rgba(44, 152, 160, 0.75);
+
   --color-selected: rgba(56, 176, 163, 0.8);
+
+  /* Shadow effect */
+
+  --shadow-main-shadow: 0px 5px 25px 2px #98e8ac;
 
   /* Font */
 

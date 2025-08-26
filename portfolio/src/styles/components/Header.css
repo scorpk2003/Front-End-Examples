@@ -1,4 +1,22 @@
 @layer components {
+  .header-nav {
+    @apply mb-15 leading-13;
+    @apply flex flex-row;
+    @apply items-center justify-around;
+    @apply rounded-full;
+    @apply bg-child-background;
+  }
+
+  .header-nav-item {
+    @apply flex-center m-1 basis-1/9 px-6;
+    /* @apply relative; */
+  }
+
+  .nav-item-hov {
+    @apply after:bg-text after:absolute after:bottom-1/12 after:left-1/2 after:h-0.5 after:w-0 after:duration-500;
+    @apply hover:text-text-hover hover:transition-all hover:ease-in hover:after:left-0 hover:after:w-full after:content-[''];
+  }
+
   .selected {
     @apply text-text-hover;
     @apply after:bg-text after:absolute after:bottom-1/12 after:left-0 after:h-0.5 after:w-full after:duration-300;
@@ -8,22 +26,5 @@
     @apply after:absolute after:bottom-1/12 after:left-1/2 after:w-0;
     @apply after:bg-text after:h-0.5;
     @apply after:animate-deselect after:duration-300 after:ease-out;
-  }
-
-  .header-nav {
-    @apply mb-15 leading-13;
-    @apply flex flex-row;
-    @apply bg-child-background items-center justify-around;
-    @apply rounded-full;
-  }
-
-  .header-nav-item {
-    @apply flex-center m-1 basis-1/9 px-6;
-    @apply relative cursor-pointer;
-  }
-
-  .nav-item-hov {
-    @apply after:bg-text after:absolute after:bottom-1/12 after:left-1/2 after:h-0.5 after:w-0 after:duration-500;
-    @apply hover:text-text-hover hover:transition-all hover:ease-in hover:after:left-0 hover:after:w-full;
   }
 }

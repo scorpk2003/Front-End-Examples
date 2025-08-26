@@ -1,2 +1,13 @@
 @import "./Header.css";
 @import "./Button.css";
+
+@layer components {
+  .hov {
+    @apply transition-all duration-300 hover:scale-105;
+  }
+
+  .element-shadow {
+    @apply shadow-lg/60 shadow-white;
+    @apply inset-shadow-xs inset-shadow-white;
+  }
+}
