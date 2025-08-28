@@ -1,0 +1,5 @@
+@layer components {
+  .wrapper {
+    @apply text-child-background bg-about-bg px-10 p-15 flex flex-row justify-around;
+  }
+}

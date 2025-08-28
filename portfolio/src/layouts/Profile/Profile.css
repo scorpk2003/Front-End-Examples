@@ -1,0 +1,11 @@
+@layer components {
+  .about {
+  }
+
+  .info {
+  }
+
+  .knowledge {
+    @apply basis-1/2;
+  }
+}

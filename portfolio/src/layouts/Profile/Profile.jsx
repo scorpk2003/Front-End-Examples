@@ -1,17 +1,15 @@
-import styles from "./Profile.module.css";
-import classNames from "classnames/bind";
-
-const cx = classNames.bind(styles);
-
 function Profile() {
   return (
-    <div className={cx("wrapper")}>
-      <div className={cx("info")}>
-        <img src="../src/assets/main-avt.jpeg" className={cx("avatar")}></img>
-        <div className={cx("separate-content")}></div>
+    <div className="about flex items-center relative my-8">
+      <div className="basis-1/2 place-items-center bg-child-background rounded-3xl">
+        <img
+          src="../src/assets/main-avt.jpeg"
+          className="p-3 size-45 rounded-full m-7"
+        ></img>
+        <div className="separate-content"></div>
         <div>info01</div>
       </div>
-      <div className={cx("knowledge")}>info02</div>
+      <div className="about__knowledge basis-1/2">info02</div>
     </div>
   );
 }

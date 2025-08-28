@@ -1,0 +1,23 @@
+/* Layouts Import */
+@import "~/layouts/Header/Header.css";
+@import "~/layouts/About/About.css";
+@import "~/layouts/Profile/Profile.css";
+
+/* Components Import */
+@import "~/components/Button/Button.css";
+
+@layer components {
+  .hov {
+    @apply transition-all duration-300 hover:scale-105;
+  }
+
+  .element-shadow {
+    @apply shadow-lg/60 shadow-white;
+    @apply inset-shadow-xs inset-shadow-white;
+  }
+
+  .separate-content {
+    @apply w-4/5 h-1 m-4 rounded-full;
+    @apply bg-text;
+  }
+}
