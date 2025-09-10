@@ -1,5 +1,12 @@
 @layer components {
-  .wrapper {
-    @apply text-child-background bg-about-bg px-10 p-15 flex flex-row justify-around;
+  .about {
+    @apply px-10 p-15 gap-8 m-auto bg-sub-bg;
+    @apply flex flex-row justify-around;
+    @apply rounded-3xl ring-2 ring-background shadow-black shadow-lg/60;
+  }
+
+  .about__content {
+    @apply flex-1 m-5 items-center text-justify my-auto;
+    @apply text-xl font-normal place-items-center;
   }
 }

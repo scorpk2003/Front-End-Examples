@@ -5,10 +5,11 @@
 
 /* Components Import */
 @import "~/components/Button/Button.css";
-
+@import "~/components/ComponentLayout/ComponentLayout.css";
 @layer components {
   .hov {
-    @apply transition-all duration-300 hover:scale-105;
+    @apply transition-all duration-500 hover:scale-110 hover:ease-in;
+    @apply hover:text-shadow-lg;
   }
 
   .element-shadow {
@@ -18,6 +19,6 @@
 
   .separate-content {
     @apply w-4/5 h-1 m-4 rounded-full;
-    @apply bg-text;
+    @apply bg-heading-text;
   }
 }

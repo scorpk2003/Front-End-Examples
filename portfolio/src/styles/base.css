@@ -5,7 +5,8 @@
 
   body {
     @apply font-Intel font-medium mt-13;
-    @apply text-center text-lg box-border text-text;
+    @apply text-center text-lg box-border text-heading/40;
+    @apply tracking-wide antialiased text-shadow-md/15;
   }
 
   html *::-webkit-scrollbar {

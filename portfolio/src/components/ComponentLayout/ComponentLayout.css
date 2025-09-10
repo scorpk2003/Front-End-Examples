@@ -1,0 +1,13 @@
+@layer components {
+  .Component-Layout {
+    @apply flex flex-col justify-center relative;
+    @apply mt-20 mb-45 space-y-25;
+    @apply w-full;
+  }
+
+  .Component-Layout__title {
+    @apply flex-center relative block w-4/5 m-auto;
+    @apply bg-gradient-to-b from-title-begin to-title-end bg-clip-text;
+    @apply text-4xl font-bold font-Dancing text-transparent tracking-widest uppercase text-shadow-xs;
+  }
+}

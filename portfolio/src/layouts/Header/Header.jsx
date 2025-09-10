@@ -15,24 +15,24 @@ function Header() {
 
   return (
     <div className="sticky z-50 top-13">
-      <ul className="header-nav shadow-main-shadow ring-1 ring-background w-90/100 mx-auto">
+      <ul className="header__nav">
         {navItems.map((item, index) => (
           <li
             key={index}
-            className="header-nav-item"
+            className="flex-center m-1 basis-1/9 px-6"
             onClick={() => handleClick(index)}
           >
             {index === 2 ? (
               <img
                 src="../src/assets/male-avt.jpeg"
                 alt={item}
-                className="fixed top-0 object-cover mt-4 overflow-hidden text-xl -translate-x-1/2 border-0 rounded-full left-1/2 size-20"
+                className="fixed top-0 object-cover mt-4 overflow-hidden text-xl -translate-x-1/2 border-0 rounded-full left-1/2 size-20 ring-8 ring-heading"
               ></img>
             ) : (
               <span
-                className={`${selectIndex === index ? "selected" : ""} ${
-                  deselectIndex === index ? "deselect" : ""
-                } nav-item-hov cursor-pointer relative`}
+                className={`nav__item--hov cursor-pointer relative
+                  ${selectIndex === index ? "nav__item--selected" : ""}
+                  ${deselectIndex === index ? "nav__item--deselect" : ""}`}
               >
                 {item}
               </span>
